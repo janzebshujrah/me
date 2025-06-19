@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Janzeb Shujrah - SEO & Backlink Specialist</title>
+    <meta name="description" content="Janzeb Shujrah is an experienced SEO expert specializing in on-page/off-page optimization, strategic link-building, and high-authority backlink placements.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- Font Awesome for icons -->
+
+    <style>
+        :root {
+            --primary-color: #00a8ff; /* A vibrant blue */
+            --secondary-color: #ffffff;
+            --background-color: #121212;
+            --card-background: #1e1e1e;
+            --text-color: #e0e0e0;
+            --heading-color: #ffffff;
+            --border-color: #333333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 0 2rem;
+        }
+
+        header {
+            background: rgba(18, 18, 18, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        header .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--heading-color);
+            text-decoration: none;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: 400;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        section {
+            padding: 6rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--heading-color);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        /* Hero Section */
+        #hero {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 100vh;
+            padding-top: 60px; /* Header height */
+        }
+        
+        .hero-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--primary-color);
+            box-shadow: 0 0 25px rgba(0, 168, 255, 0.5);
+            margin-bottom: 2rem;
+        }
+        
+        #hero h1 {
+            font-size: 3.5rem;
+            color: var(--heading-color);
+            margin-bottom: 1rem;
+        }
+        
+        #hero .subtitle {
+            font-size: 1.3rem;
+            color: var(--text-color);
+            font-weight: 300;
+        }
+        
+        .typing-cursor {
+            display: inline-block;
+            width: 3px;
+            background-color: var(--primary-color);
+            animation: blink 0.7s infinite;
+        }
+        
+        @keyframes blink { 50% { opacity: 0; } }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 12px 28px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 2rem;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 168, 255, 0.3);
+        }
+
+        /* About Section */
+        #about p {
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background-color: var(--card-background);
+            padding: 2.5rem 2rem;
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .service-card i {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .service-card h3 {
+            color: var(--heading-color);
+            margin-bottom: 1rem;
+        }
+
+        /* Why Work With Me Section */
+        #why-me .why-grid {
+            max-width: 800px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+        #why-me ul { list-style: none; }
+        #why-me li {
+            background: var(--card-background);
+            padding: 1rem;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            border-left: 4px solid var(--primary-color);
+        }
+        #why-me li i { color: var(--primary-color); margin-right: 1rem; }
+
+
+        /* Placements & Blog Sections */
+        #placements, #blog {
+            text-align: center;
+        }
+
+        .icon-lg {
+            font-size: 4rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        /* Contact Section */
+        .social-links {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .social-links a {
+            color: var(--text-color);
+            font-size: 2rem;
+            margin: 0 1rem;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--primary-color);
+            transform: translateY(-5px);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            border-top: 1px solid var(--border-color);
+            color: #aaa;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            header nav { display: none; } /* Simplification for mobile, can add a hamburger menu */
+            #hero h1 { font-size: 2.5rem; }
+            #hero .subtitle { font-size: 1rem; }
+            #why-me .why-grid { grid-template-columns: 1fr; }
+            .section-title { font-size: 2rem; }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <a href="#hero" class="logo">Janzeb Shujrah</a>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#placements">Placements</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero">
+            <!-- IMPORTANT: Replace 'janzeb.jpg' with your actual photo file name -->
+            <img src="janzeb.jpg" alt="Janzeb Shujrah" class="hero-img">
+            <h1>JANZEB SHUJRAH</h1>
+            <p class="subtitle"><span id="typing-text"></span><span class="typing-cursor"> </span></p>
+            <a href="#contact" class="btn">Get in Touch</a>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <p>
+                    I'm Janzeb Shujrah, a passionate SEO and backlink specialist with over 5+ years of experience in the digital outreach field. My mission is to help businesses and individuals gain visibility, climb search rankings, and grow their digital authority. With a proven track record in both on-page and off-page SEO, I offer results-driven solutions to increase high-quality traffic and improve your brand's SEO profile.
+                </p>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" style="background-color: var(--card-background);">
+            <div class="container">
+                <h2 class="section-title">My Services</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <i class="fas fa-link"></i>
+                        <h3>Backlink Packages</h3>
+                        <p>High-authority, niche-relevant backlinks tailored to your specific needs and goals.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-handshake"></i>
+                        <h3>Custom Outreach</h3>
+                        <p>Manual and authentic outreach to secure high-quality placements on authoritative sites.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-search"></i>
+                        <h3>SEO Audits</h3>
+                        <p>In-depth analysis to spot backlink opportunities and identify/remove harmful links.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-users"></i>
+                        <h3>White-Label Solutions</h3>
+                        <p>Be the hero for your agency clients with my reliable, confidential backlink services.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Why Work With Me Section -->
+        <section id="why-me">
+            <div class="container">
+                <h2 class="section-title">Why Work With Me?</h2>
+                <div class="why-grid">
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i>5+ years of industry experience</li>
+                        <li><i class="fas fa-check-circle"></i>Real, niche-relevant backlinks</li>
+                        <li><i class="fas fa-check-circle"></i>Personalized, strategic approach</li>
+                    </ul>
+                     <ul>
+                        <li><i class="fas fa-check-circle"></i>Transparent & ethical practices</li>
+                        <li><i class="fas fa-check-circle"></i>Fast turnaround & responsive support</li>
+                        <li><i class="fas fa-check-circle"></i>Competitive pricing with quality assurance</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Placement Sheet Section -->
+        <section id="placements" style="background-color: var(--card-background);">
+            <div class="container">
+                <h2 class="section-title">My Placement List</h2>
+                 <!-- Icon for Google Sheets -->
+                <i class="fas fa-file-excel icon-lg"></i>
+                <p>I maintain a curated list of high-authority websites and platforms for article placements and guest posts.<br>This sheet details available sites, their metrics, and pricing to significantly enhance your digital presence.</p>
+                <!-- IMPORTANT: Replace the '#' with the public link to your Google Sheet -->
+                <a href="https://sites.google.com/view/janzebshujrah/janzeb-sheets" target="_blank" class="btn">View Placement Sheet</a>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section id="blog">
+            <div class="container">
+                <h2 class="section-title">BLOG</h2>
+                 <p>I share insights, tips, and case studies on SEO and link-building. Check out my latest posts!</p>
+                 <!-- IMPORTANT: Replace '#' with the link to your blog -->
+                 <a href="#" class="btn">Visit My Blog</a>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section id="contact" style="background-color: var(--card-background);">
+            <div class="container">
+                <h2 class="section-title">Let's Connect</h2>
+                <p style="text-align: center;">Ready to boost your online presence? I'm here to help you achieve your SEO goals.</p>
+                <div class="social-links">
+                    <!-- IMPORTANT: Replace '#' with your actual profile/contact links -->
+                    <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://wa.me/your-whatsapp-number" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="mailto:your-email@example.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2024 Janzeb Shujrah. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Typing Effect -->
+    <script>
+        const texts = ["SEO & Backlink Specialist", "I build digital authority.", "Let's climb the search rankings."];
+        let count = 0;
+        let index = 0;
+        let currentText = '';
+        let letter = '';
+
+        (function type() {
+            if (count === texts.length) {
+                count = 0;
+            }
+            currentText = texts[count];
+            letter = currentText.slice(0, ++index);
+
+            document.getElementById('typing-text').textContent = letter;
+            if (letter.length === currentText.length) {
+                count++;
+                index = 0;
+                setTimeout(type, 2000); // Wait 2 seconds before starting next text
+            } else {
+                setTimeout(type, 100);
+            }
+        }());
+    </script>
+    <!-- Use Font Awesome 5 for this setup -->
+    <script src="https://kit.fontawesome.com/64b7325838.js" crossorigin="anonymous"></script>
+
+</body>
+</html>
